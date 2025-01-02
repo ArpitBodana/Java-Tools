@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class DontSleep {
 
     private static  Boolean check=false;
-    
+
     private static final String dateTimePattern = "HH:mm:ss dd-MM-yyyy";
 
     public static void main(String[] args) {
@@ -19,6 +19,7 @@ public class DontSleep {
         int delayInMinutes= 2;
 
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+        
         Runnable jiggleTask = () -> {
             check=!check;
             try {
